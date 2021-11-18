@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="card col m-2 d-flex flex-column text-center" *ngFor="let knob of misKnobs" >
+        <div class="">
+        <h2 class="card-title" > Control {{ knob.titulo | titlecase }}</h2>
+        <p> {{ knob.subtitulo }} </p>
+        <p-knob [(ngModel)]="knob.dato" 
+                [valueColor]="knob.color" 
+                [readonly]="true"
+                [max] = "knob.max"
+                ></p-knob>
+        <h3> {{ knob.unidad }} </h3>
+        <button routerLink="/control/proceso/{{knob.titulo}}" class="btn btn-primary col-12">Ver proceso</button>
+        </div>
+    </div>
+</div>
+

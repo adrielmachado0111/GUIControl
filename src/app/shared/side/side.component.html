@@ -1,0 +1,87 @@
+
+
+<mat-selection-list #shoes [multiple]="false">
+    <mat-list-option routerLink="/control/Dashboard" >
+        <div class="d-flex justify-content-start">
+            <span class="material-icons">speed</span>
+            <span class="m-1">Dashboard</span> 
+        </div>
+        
+    </mat-list-option>
+    
+    <mat-list-option [matMenuTriggerFor]="menu">
+        <div class="d-flex justify-content-start">
+            <span class="material-icons">precision_manufacturing</span>
+            <span class="m-1">Proceso</span> 
+        </div>
+        <mat-menu #menu="matMenu" xPosition="after">
+            <button mat-menu-item routerLink="/control/proceso/presion" >Presión</button>
+            <button mat-menu-item routerLink="/control/proceso/flujo" >Flujo</button>
+            <button mat-menu-item routerLink="/control/proceso/nivel" >Nivel</button>
+            <button mat-menu-item routerLink="/control/proceso/temperatura" >Temperatura</button>
+        </mat-menu>
+    </mat-list-option>
+
+    <mat-list-option routerLink="/control/permisos">
+        <div class="d-flex justify-content-start">
+            <span class="material-icons">key</span>
+            <span class="m-1">Permisos</span> 
+        </div>
+        
+    </mat-list-option>
+    <mat-list-option routerLink="/control/configuracion">
+        <div class="d-flex justify-content-start">
+            <span class="material-icons">settings</span>
+            <span class="m-1">Configuración</span> 
+        </div>
+        
+    </mat-list-option>
+        
+  </mat-selection-list>
+
+ <!--    
+
+    <mat-list-option *ngFor="let item of miMenu" [value]="item">
+        <div class="d-flex justify-content-start">
+            <span class="material-icons">{{item.icon}}</span>
+            <span class="m-1">{{item.texto}}</span> 
+        </div>
+        
+    </mat-list-option>
+    <button mat-button *ngIf="item.texto == 'proceso'"  [matMenuTriggerFor]="menu">Menu</button>
+        <mat-menu #menu="matMenu">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+</mat-menu>
+
+
+
+     <span class="mr-4"></span> 
+    <mat-sidenav #sidenav="matSidenav"  class="mat-elevation-z4" >
+        <mat-nav-list>
+          <mat-list-item routerLink="/home/comoVamos" style="color: #888888" >
+            <span class="material-icons">trending_up</span>
+            <span>Dashboard</span>
+          </mat-list-item>
+          
+          <mat-list-item routerLink="/home/miDesarrollo" style="color: #888888" >
+            <span class="material-icons">ballot</span>
+            <span>Proceso</span>
+          </mat-list-item>
+          <mat-list-item routerLink="/home/aprendamos" style="color: #888888">
+            <span class="material-icons">auto_stories</span>
+            <span>Permisos</span>
+          </mat-list-item>
+          <mat-list-item routerLink="/home/respel" style="color: #888888" routerLinkActive = "active">
+            <span class="material-icons">delete_forever</span>
+            <span>Configuración</span>
+          </mat-list-item>
+          
+        </mat-nav-list>
+        <span class="material-icons">face</span>
+            <span>{{shoe}}</span> 
+      </mat-sidenav> -->
+
+
+
+<!-- <p-tieredMenu [model]="items"></p-tieredMenu>  -->

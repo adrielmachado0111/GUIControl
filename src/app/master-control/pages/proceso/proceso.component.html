@@ -1,0 +1,49 @@
+
+<div class="row">
+  <div class="col-6 ">
+    <form autocomplete="off" class="d-flex flex-column">
+      <h3>Datos del proceso</h3>
+      <mat-form-field appearance="fill" >
+      <mat-label>Estado actual</mat-label>
+      <input matInput [value]="gestionDatos.valorActual" readonly>
+    </mat-form-field>
+    <mat-form-field appearance="fill" >
+      <mat-label>Set point</mat-label>
+      <input matInput [value]="gestionDatos.setPoint" >
+    </mat-form-field>
+    <mat-form-field appearance="fill" >
+      <mat-label>Kp</mat-label>
+      <input matInput [value]="gestionDatos.kp" >
+    </mat-form-field>
+    <mat-form-field appearance="fill" >
+      <mat-label>Ti</mat-label>
+      <input matInput [value]="gestionDatos.ti">
+    </mat-form-field>
+    <mat-form-field appearance="fill" >
+      <mat-label>Td</mat-label>
+      <input matInput [value]="gestionDatos.td" >
+    </mat-form-field>
+    <button mat-raised-button >Sintonizar con el PLC</button>
+    </form>
+  </div>
+  <div class="col-6 d-flex flex-column text-center">
+    <p-knob [(ngModel)]="gestionDatos.valorActual" [size]="200" [valueColor]="gestionDatos.color" [max]="gestionDatos.max" [readonly]="true"></p-knob>
+    <h1> {{ gestionDatos.unidad }} </h1>
+    <app-grafica></app-grafica>
+  </div>
+</div>
+<!-- <div class="row">
+  <div class="col ">
+    <h4>
+      aqui va la grafica
+    </h4>
+    
+  </div>
+
+</div> -->
+<!-- <div class="d-flex justify-content-center">
+
+    
+    
+  </div> -->
+<!-- <app-grafica></app-grafica> -->
